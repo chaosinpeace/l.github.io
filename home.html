@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diary — Thoughts</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #f8f5f1;
+      color: #39312f;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    header {
+      max-width: 680px;
+      margin: auto;
+      padding: 30px 24px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    a { color: inherit; }
+
+    header a {
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 680px;
+      margin: auto;
+      padding: 55px 24px 100px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 8vw, 58px);
+      font-weight: normal;
+      margin: 0 0 15px;
+    }
+
+    .subtitle {
+      color: #8b7f77;
+      margin-bottom: 65px;
+      line-height: 1.8;
+    }
+
+    .post {
+      padding: 28px 0;
+      border-bottom: 1px solid #e6ded8;
+    }
+
+    .number {
+      display: inline-block;
+      font-size: 36px;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .number:hover { color: #a17c72; }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #a1948b;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">← назад</a>
+    <a href="index.html">thoughts.</a>
+  </header>
+
+  <main>
+    <h1>Diary</h1>
+    <p class="subtitle">записи, которые остались между строк.</p>
+
+    <section class="post">
+      <a class="number" href="posts/first-post.html">12</a>
+    </section>
+
+    <section class="post">
+      <a class="number" href="posts/second-poem.html">32</a>
+    </section>
+  </main>
+
+  <footer>thoughts. · личный дневник</footer>
+</body>
+</html>
