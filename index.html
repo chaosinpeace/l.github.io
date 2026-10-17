@@ -4,99 +4,252 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thoughts</title>
+  <meta name="theme-color" content="#f8f5f1">
+  <title>Thoughts — E-diary</title>
+
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 30px;
+    }
 
     body {
       margin: 0;
-      min-height: 100vh;
       background: #f8f5f1;
       color: #39312f;
       font-family: Georgia, "Times New Roman", serif;
-      display: flex;
-      flex-direction: column;
     }
 
-    header {
-      padding: 30px 8%;
-      font-size: 17px;
+    a {
+      color: inherit;
+    }
+
+    .top {
+      padding: 30px 7%;
+      font-size: 15px;
       letter-spacing: 2px;
     }
 
-    main {
-      flex: 1;
+    .hero {
+      min-height: 78vh;
+      padding: 70px 24px 45px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 40px 24px 100px;
     }
 
-    .small {
+    .eyebrow {
+      color: #a1948b;
       font-size: 11px;
       letter-spacing: 4px;
       text-transform: uppercase;
-      color: #a1948b;
-      margin-bottom: 28px;
+      margin-bottom: 25px;
     }
 
-    h1 {
-      font-size: clamp(54px, 12vw, 100px);
+    .hero h1 {
+      font-size: clamp(58px, 12vw, 100px);
       font-weight: normal;
       letter-spacing: -3px;
       margin: 0 0 25px;
     }
 
-    .description {
-      color: #8b7f77;
+    .intro {
+      max-width: 360px;
+      color: #887e77;
       font-size: 15px;
       line-height: 2;
-      max-width: 340px;
-      margin-bottom: 42px;
+      margin: 0;
     }
 
-    .enter {
-      display: inline-block;
-      color: #39312f;
-      border: 1px solid #b9aaa0;
-      padding: 14px 32px;
+    .navigation {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px 32px;
+      padding: 30px 20px 55px;
+    }
+
+    .navigation a {
       text-decoration: none;
-      font-size: 12px;
-      letter-spacing: 2px;
-      transition: all 0.2s ease;
+      color: #71655e;
+      font-size: 13px;
+      letter-spacing: 1px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid transparent;
+      transition: color .2s, border-color .2s;
     }
 
-    .enter:hover {
-      background: #39312f;
-      color: #f8f5f1;
-      border-color: #39312f;
+    .navigation a:hover {
+      color: #39312f;
+      border-color: #b9aaa0;
+    }
+
+    .content {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 20px 25px 100px;
+    }
+
+    .section {
+      padding: 55px 0;
+      border-top: 1px solid #e6ded8;
+      scroll-margin-top: 20px;
+    }
+
+    .section-label {
+      color: #a1948b;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .section h2 {
+      font-weight: normal;
+      font-size: 32px;
+      margin: 0 0 20px;
+    }
+
+    .section-note {
+      color: #887e77;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .poem-link {
+      display: block;
+      width: fit-content;
+      margin: 24px 0;
+      font-size: 32px;
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .poem-link:hover {
+      color: #a17c72;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      color: #887e77;
     }
 
     footer {
-      padding: 25px;
+      border-top: 1px solid #e6ded8;
+      padding: 28px 20px 35px;
       text-align: center;
       color: #a1948b;
       font-size: 11px;
       letter-spacing: 1px;
     }
+
+    @media (max-width: 480px) {
+      .hero {
+        min-height: 70vh;
+      }
+
+      .navigation {
+        gap: 18px 24px;
+      }
+
+      .content {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
   </style>
 </head>
-<body>
-  <header>thoughts.</header>
 
+<body>
+
+  <header class="top">
+    thoughts.
+  </header>
+
+  <!-- ПЕРВАЯ СТРАНИЦА: ВСТУПЛЕНИЕ -->
   <main>
-    <p class="small">e-diary</p>
-    <h1>Thoughts</h1>
-    <p class="description">
-      Страница, где периодически будут поститься авторские письменные работы: стихи, статьи, эссе и другие письменности.
-      Каждый желающий может опубликовать свою работу, через меня<3 <br>
-      Это мой первый подобный проект поэтому буду рада любой обратной связи
-    </p>
-    <a class="enter" href="home.html">ВОЙТИ В ДНЕВНИК ↗</a>
+    <section class="hero" id="home">
+      <p class="eyebrow">A personal e-diary</p>
+
+      <h1>Thoughts</h1>
+
+      <p class="intro">
+        некоторые чувства невозможно произнести вслух.
+        поэтому я оставляю их здесь.
+      </p>
+    </section>
+
+    <!-- ПЕРЕХОДЫ ПО РАЗДЕЛАМ -->
+    <nav class="navigation" aria-label="Разделы дневника">
+      <a href="#x">х</a>
+      <a href="#articles">статьи</a>
+      <a href="#poems">стихи</a>
+      <a href="#about">о</a>
+    </nav>
+
+    <!-- РАЗДЕЛ Х -->
+    <div class="content">
+
+      <section class="section" id="x">
+        <p class="section-label">01 / Раздел</p>
+        <h2>х</h2>
+        <p class="section-note">
+          место для мыслей, которые пока не нашли названия.
+        </p>
+        <a class="back" href="#home">↑ наверх</a>
+      </section>
+
+      <!-- РАЗДЕЛ СТАТЬИ -->
+      <section class="section" id="articles">
+        <p class="section-label">02 / Раздел</p>
+        <h2>статьи</h2>
+        <p class="section-note">
+          здесь будут мои тексты, заметки и размышления.
+        </p>
+        <a class="back" href="#home">↑ наверх</a>
+      </section>
+
+      <!-- РАЗДЕЛ СТИХИ -->
+      <section class="section" id="poems">
+        <p class="section-label">03 / Раздел</p>
+        <h2>стихи</h2>
+        <p class="section-note">
+          некоторые слова остаются, даже когда всё остальное проходит.
+        </p>
+
+        <a class="poem-link" href="posts/first-post.html">12</a>
+        <a class="poem-link" href="posts/second-poem.html">32</a>
+
+        <a class="back" href="#home">↑ наверх</a>
+      </section>
+
+      <!-- РАЗДЕЛ О -->
+      <section class="section" id="about">
+        <p class="section-label">04 / Раздел</p>
+        <h2>о</h2>
+        <p class="section-note">
+          личное пространство. мысли, чувства и слова,
+          которым нужно было где-то остаться.
+        </p>
+        <a class="back" href="#home">↑ наверх</a>
+      </section>
+
+    </div>
   </main>
 
-  <footer>мои мысли · мои слова · моё пространство</footer>
+  <footer>
+    thoughts. · личное пространство
+  </footer>
+
 </body>
 </html>
