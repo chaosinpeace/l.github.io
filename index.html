@@ -1,124 +1,131 @@
 
-
-       
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#faf8f5">
-  <meta name="description" content="Личный дневник мыслей, стихов и чувств.">
-  <title>posts — E-diary</title>
+  <title>Thoughts — E-diary</title>
+
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
+    * {
+      box-sizing: border-box;
     }
 
-    .post-card {
-      padding: 25px 0;
-      border-bottom: 1px solid #e8e1dc;
+    body {
+      margin: 0;
+      background: #faf8f5;
+      color: #38312f;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
-    .post-card:first-child {
-      padding-top: 10px;
+    header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 30px 24px;
     }
 
-    .post-date {
-      font-size: 12px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: #998b83;
-      margin-bottom: 12px;
-    }
-
-    .post-title {
-      font-size: clamp(23px, 4vw, 30px);
-      line-height: 1.4;
-      font-weight: normal;
-      margin: 0 0 10px;
-    }
-
-    .post-title a {
-      color: inherit;
+    .logo {
+      color: #38312f;
       text-decoration: none;
+      font-size: 19px;
+      letter-spacing: 1px;
     }
 
-    .post-title a:hover {
-      color: #a67b75;
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 45px 24px 100px;
     }
 
-    .post-excerpt {
-      color: #817771;
+    .intro {
+      margin-bottom: 65px;
+    }
+
+    .intro h1 {
+      margin: 0 0 15px;
+      font-size: clamp(38px, 8vw, 56px);
+      font-weight: normal;
+      letter-spacing: -1.5px;
+    }
+
+    .intro p {
+      color: #8c8179;
       font-size: 15px;
       line-height: 1.8;
-      margin: 0;
     }
 
-    .page-intro {
-      margin-bottom: 45px;
+    .post {
+      padding: 25px 0;
+      border-bottom: 1px solid #e9e2dc;
     }
 
-    .page-intro h1 {
-      font-size: clamp(36px, 7vw, 54px);
+    .post-number {
+      display: inline-block;
+      color: #38312f;
+      font-size: 30px;
       font-weight: normal;
-      margin-bottom: 12px;
+      text-decoration: none;
+      transition: color 0.2s ease;
     }
 
-    .page-intro p {
-      color: #817771;
-      line-height: 1.8;
+    .post-number:hover {
+      color: #a17c72;
+    }
+
+    .date {
+      margin: 0 0 12px;
+      color: #a1948b;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 25px 24px 40px;
+      color: #a1948b;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    a {
+      -webkit-tap-highlight-color: transparent;
     }
   </style>
 </head>
 
 <body>
+
   <header>
     <a class="logo" href="index.html">thoughts.</a>
   </header>
 
   <main>
-    <section class="page-intro">
-      <h1>posts</h1>
-      <p>E-diary — пространство мыслей, чувств и слов.</p>
+
+    <section class="intro">
+      <h1>Thoughts</h1>
+      <p>E-diary · личное пространство мыслей и чувств.</p>
     </section>
 
-    <section>
-      <div class="posts-list">
-
-        <article class="post-card">
-          <p class="post-date">х</p>
-          <h2 class="post-title">
-            <a href="posts/first-post.html">
-              х
-            </a>
-          </h2>
-          <p class="post-excerpt">
-            х
-          </p>
-        </article>
-
-        <article class="post-card">
-          <p class="post-date">х</p>
-          <h2 class="post-title">
-            <a href="posts/second-post.html">
-              х
-            </a>
-          </h2>
-          <p class="post-excerpt">
-            х
-          </p>
-        </article>
-
-      </div>
+    <section class="post">
+      <p class="date">01 / Запись</p>
+      <a class="post-number" href="posts/first-post.html">12</a>
     </section>
+
+    <section class="post">
+      <p class="date">02 / Запись</p>
+      <a class="post-number" href="posts/second-poem.html">32</a>
+    </section>
+
   </main>
 
   <footer>
-    thoughts. · Личное пространство для мыслей
+    thoughts. · E-diary
   </footer>
+
 </body>
 </html>
