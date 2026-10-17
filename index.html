@@ -4,128 +4,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#faf8f5">
-  <title>Thoughts — E-diary</title>
-
-  <link rel="stylesheet" href="style.css">
-
+  <title>Thoughts</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      background: #faf8f5;
-      color: #38312f;
+      min-height: 100vh;
+      background: #f8f5f1;
+      color: #39312f;
       font-family: Georgia, "Times New Roman", serif;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 30px 24px;
-    }
-
-    .logo {
-      color: #38312f;
-      text-decoration: none;
-      font-size: 19px;
-      letter-spacing: 1px;
+      padding: 30px 8%;
+      font-size: 17px;
+      letter-spacing: 2px;
     }
 
     main {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 45px 24px 100px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 24px 100px;
     }
 
-    .intro {
-      margin-bottom: 65px;
-    }
-
-    .intro h1 {
-      margin: 0 0 15px;
-      font-size: clamp(38px, 8vw, 56px);
-      font-weight: normal;
-      letter-spacing: -1.5px;
-    }
-
-    .intro p {
-      color: #8c8179;
-      font-size: 15px;
-      line-height: 1.8;
-    }
-
-    .post {
-      padding: 25px 0;
-      border-bottom: 1px solid #e9e2dc;
-    }
-
-    .post-number {
-      display: inline-block;
-      color: #38312f;
-      font-size: 30px;
-      font-weight: normal;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .post-number:hover {
-      color: #a17c72;
-    }
-
-    .date {
-      margin: 0 0 12px;
-      color: #a1948b;
+    .small {
       font-size: 11px;
-      letter-spacing: 1.5px;
+      letter-spacing: 4px;
       text-transform: uppercase;
+      color: #a1948b;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-size: clamp(54px, 12vw, 100px);
+      font-weight: normal;
+      letter-spacing: -3px;
+      margin: 0 0 25px;
+    }
+
+    .description {
+      color: #8b7f77;
+      font-size: 15px;
+      line-height: 2;
+      max-width: 340px;
+      margin-bottom: 42px;
+    }
+
+    .enter {
+      display: inline-block;
+      color: #39312f;
+      border: 1px solid #b9aaa0;
+      padding: 14px 32px;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 2px;
+      transition: all 0.2s ease;
+    }
+
+    .enter:hover {
+      background: #39312f;
+      color: #f8f5f1;
+      border-color: #39312f;
     }
 
     footer {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 25px 24px 40px;
+      padding: 25px;
+      text-align: center;
       color: #a1948b;
-      font-size: 12px;
-      letter-spacing: 0.5px;
-    }
-
-    a {
-      -webkit-tap-highlight-color: transparent;
+      font-size: 11px;
+      letter-spacing: 1px;
     }
   </style>
 </head>
-
 <body>
-
-  <header>
-    <a class="logo" href="index.html">thoughts.</a>
-  </header>
+  <header>thoughts.</header>
 
   <main>
-
-    <section class="intro">
-      <h1>Thoughts</h1>
-      <p>E-diary · личное пространство мыслей и чувств.</p>
-    </section>
-
-    <section class="post">
-      <p class="date">01 / Запись</p>
-      <a class="post-number" href="posts/first-post.html">12</a>
-    </section>
-
-    <section class="post">
-      <p class="date">02 / Запись</p>
-      <a class="post-number" href="posts/second-poem.html">32</a>
-    </section>
-
+    <p class="small">e-diary</p>
+    <h1>Thoughts</h1>
+    <p class="description">
+      Страница, где периодически будут поститься авторские письменные работы: стихи, статьи, эссе и другие письменности.
+      Каждый желающий может опубликовать свою работу, через меня<3 <br>
+      Это мой первый подобный проект поэтому буду рада любой обратной связи
+    </p>
+    <a class="enter" href="home.html">ВОЙТИ В ДНЕВНИК ↗</a>
   </main>
 
-  <footer>
-    thoughts. · E-diary
-  </footer>
-
+  <footer>мои мысли · мои слова · моё пространство</footer>
 </body>
 </html>
