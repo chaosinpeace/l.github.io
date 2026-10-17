@@ -1,44 +1,124 @@
 
+
+       
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf8f5">
+  <meta name="description" content="Личный дневник мыслей, стихов и чувств.">
   <title>Thoughts — E-diary</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .posts-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .post-card {
+      padding: 25px 0;
+      border-bottom: 1px solid #e8e1dc;
+    }
+
+    .post-card:first-child {
+      padding-top: 10px;
+    }
+
+    .post-date {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #998b83;
+      margin-bottom: 12px;
+    }
+
+    .post-title {
+      font-size: clamp(23px, 4vw, 30px);
+      line-height: 1.4;
+      font-weight: normal;
+      margin: 0 0 10px;
+    }
+
+    .post-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .post-title a:hover {
+      color: #a67b75;
+    }
+
+    .post-excerpt {
+      color: #817771;
+      font-size: 15px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .page-intro {
+      margin-bottom: 45px;
+    }
+
+    .page-intro h1 {
+      font-size: clamp(36px, 7vw, 54px);
+      font-weight: normal;
+      margin-bottom: 12px;
+    }
+
+    .page-intro p {
+      color: #817771;
+      line-height: 1.8;
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <a class="logo" href="index.html">thoughts.</a>
-    <a href="#about">about</a>
   </header>
 
   <main>
-    <section id="about" class="intro">
-      <p class="eyebrow">E-diary</p>
-      <h1>A place for thoughts, ideas and discoveries.</h1>
-      <p class="description">
-      Страничка, где периодически будут публиковаться авторские письменные работы: стихи, статьи, эссе и все виды писаний. 
-        Каждый желающий сможет опубликовать тут свою работу, приветствуются все языки, публикации будут проводиться через меня<3 
-        
-          Это мой первый подобный проект, поэтому буду рада любой обратной связи
-      </p>
+    <section class="page-intro">
+      <h1>Thoughts</h1>
+      <p>E-diary — пространство мыслей, чувств и слов.</p>
     </section>
 
-    <section class="writing">
-      <h2>Writing</h2>
+    <section>
+      <div class="posts-list">
 
-      <article>
-        <p class="date">October 17, 2026</p>
-        <h3><a href="posts/first-post.html">
-        </a></h3>
-        <p class="excerpt">
-          x
-        </p>
-      </article>
+        <article class="post-card">
+          <p class="post-date">х</p>
+          <h2 class="post-title">
+            <a href="posts/first-post.html">
+              х
+            </a>
+          </h2>
+          <p class="post-excerpt">
+            х
+          </p>
+        </article>
+
+        <article class="post-card">
+          <p class="post-date">х</p>
+          <h2 class="post-title">
+            <a href="posts/second-poem.html">
+              х
+            </a>
+          </h2>
+          <p class="post-excerpt">
+            х
+          </p>
+        </article>
+
+      </div>
     </section>
   </main>
 
-  <footer>Made with care · 2026</footer>
+  <footer>
+    thoughts. · Личное пространство для мыслей
+  </footer>
 </body>
 </html>
