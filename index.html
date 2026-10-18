@@ -127,11 +127,21 @@
     .work-link .arrow {
       font-size: 20px;
       color: #94776a;
+      flex-shrink: 0;
     }
 
     .number-link {
       font-size: 23px;
       letter-spacing: 2px;
+    }
+
+    .author {
+      display: block;
+      margin-top: 8px;
+      color: #99877d;
+      font-size: 12px;
+      font-style: italic;
+      letter-spacing: 1px;
     }
 
     .empty-note {
@@ -175,12 +185,12 @@
   <header>THOUGHTS.</header>
 
   <main>
-    <div class="eyebrow">e-diary</div>
+    <div class="eyebrow">A personal e-diary</div>
 
     <h1>Thoughts</h1>
 
     <p class="intro">
-     Это пространство для авторских работ, мыслей и чувств,
+       Это пространство для авторских работ, мыслей и чувств,
         которым однажды стало тесно внутри. Здесь будут время
         от времени появляться новые тексты, и каждый желающий
         сможет поделиться собственным творчеством.
@@ -200,13 +210,17 @@
       <a href="#about">о</a>
     </nav>
 
+    <!-- РАЗДЕЛ Х -->
+
     <section id="x">
       <h2>х</h2>
+
       <p class="section-note">
         тексты, которые хочется оставить здесь.
       </p>
 
       <div class="work-list">
+
         <a class="work-link" href="posts/first-post.html">
           <span class="number-link">12</span>
           <span class="arrow">↗</span>
@@ -216,37 +230,71 @@
           <span class="number-link">32</span>
           <span class="arrow">↗</span>
         </a>
+
+        <a class="work-link" href="posts/seventh-poem.html">
+          <span class="number-link">7</span>
+          <span class="arrow">↗</span>
+        </a>
+
       </div>
     </section>
 
+    <!-- РАЗДЕЛ СТАТЬИ -->
+
     <section id="articles">
       <h2>статьи</h2>
+
       <p class="section-note">
         мысли, наблюдения и слова о том, что нас окружает.
       </p>
 
-      <p class="empty-note">скоро здесь появятся новые тексты.</p>
+      <p class="empty-note">
+        скоро здесь появятся новые тексты.
+      </p>
     </section>
+
+    <!-- РАЗДЕЛ СТИХИ -->
 
     <section id="poems">
       <h2>стихи</h2>
+
       <p class="section-note">
         строки о чувствах, которые не всегда можно выразить иначе.
       </p>
 
       <div class="work-list">
+
         <a class="work-link" href="posts/third-poem.html">
-          <span>новое стихотворение</span>
+          <span>
+            <span>Я полюбил в тебе не фигуру</span>
+            <small class="author">автор: I</small>
+          </span>
           <span class="arrow">↗</span>
         </a>
+
+        <a class="work-link" href="posts/fifth-poem.html">
+          <span>
+            <span>Наркоман не человек, а мразь</span>
+            <small class="author">автор: I</small>
+          </span>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a class="work-link" href="posts/sixth-poem.html">
+          <span>И каждая мысль возвращается снова</span>
+          <span class="arrow">↗</span>
+        </a>
+
       </div>
     </section>
+
+    <!-- РАЗДЕЛ О САЙТЕ -->
 
     <section id="about">
       <h2>о</h2>
 
       <p class="about-text">
-      Некоторые чувства невозможно произнести вслух, поэтому оставим их здесь
+       Невоторые чувства нельзя передать словами, поэтому оставим их здесь
       </p>
     </section>
 
